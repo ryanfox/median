@@ -1,3 +1,7 @@
+class GameError(Exception):
+    pass
+
+
 class Game:
     def __init__(self, length=8):
         self.plays = []
@@ -8,9 +12,9 @@ class Game:
 
     def play_round(self, num1, num2, num3):
         if len(self.plays) > self.length:
-            raise RuntimeError('Already played full game')
+            raise GameError('Already played full game')
         if any(num > 8 for num in [num1, num2, num3]):
-            raise RuntimeError(f'Play {max(num1, num2, num3)} out of range')
+            raise GameError(f'Play {max(num1, num2, num3)} out of range')
 
         self.plays.append((num1, num2, num3))
 
