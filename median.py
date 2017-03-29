@@ -1,7 +1,7 @@
 # The MEDIAN game.  Via:
 # https://gilkalai.wordpress.com/2017/01/14/the-median-game/
 
-from players import RandomPlayer, ConstantPlayer, ScorePlusTwoPlayer, HumanPlayer
+from players import RandomPlayer, ConstantPlayer, ScorePlusPlayer, HumanPlayer, GreedyPlayer
 from tournament import Tournament
 
 
@@ -22,4 +22,4 @@ def run_tournament(player1, player2, player3):
 
 
 if __name__ == '__main__':
-    run_tournament(ScorePlusTwoPlayer(), RandomPlayer(), ConstantPlayer())
+    run_tournament(ScorePlusPlayer(), RandomPlayer(), GreedyPlayer())
