@@ -15,6 +15,8 @@ class Game:
             raise GameError('Already played full game')
         if any(num > 8 for num in [num1, num2, num3]):
             raise GameError(f'Play {max(num1, num2, num3)} out of range')
+        if any(num < 1 for num in [num1, num2, num3]):
+            raise GameError(f'Play {min(num1, num2, num3)} out of range')
 
         self.plays.append((num1, num2, num3))
 
