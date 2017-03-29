@@ -3,6 +3,9 @@ class Game:
         self.plays = []
         self.length = length
 
+    def __str__(self):
+        return '\n'.join([str(play) for play in self.plays])
+
     def play_round(self, num1, num2, num3):
         if len(self.plays) > self.length:
             raise RuntimeError('Already played full game')
