@@ -36,7 +36,8 @@ class HumanPlayer(Player):
         self.name = 'Human'
 
     def play(self, game=None, position=None):
-        print(f'Game (you are player #{position}:')
+        print(f'Game (you are player #{position + 1}):')
         print(game)
+        print('Scores:')
         print(game.get_score())
         return int(input('>'))
