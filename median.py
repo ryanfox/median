@@ -1,7 +1,7 @@
 # The MEDIAN game.  Via:
 # https://gilkalai.wordpress.com/2017/01/14/the-median-game/
 
-from players import RandomPlayer, ConstantPlayer, ScorePlusTwoPlayer
+from players import RandomPlayer, ConstantPlayer, ScorePlusTwoPlayer, HumanPlayer
 from tournament import Tournament
 
 
@@ -18,7 +18,7 @@ def run_tournament(player1, player2, player3):
     print(f'{player3.name:>{width}} | {results[2] / tournament.rounds:.3f}')
 
     tie = 'Tie'
-    print(f'{tie:>{width}} | {sum(results) / tournament.rounds:.3f}')
+    print(f'{tie:>{width}} | {(tournament.rounds - sum(results)) / tournament.rounds:.3f}')
 
 
 if __name__ == '__main__':
