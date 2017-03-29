@@ -1,6 +1,7 @@
 # MEDIAN
 
 The MEDIAN game, as described [here](https://gilkalai.wordpress.com/2017/01/14/the-median-game/).
+Also inspired by [Axelrod](https://github.com/Axelrod-Python/Axelrod)
 
 ## How the game is played
 
